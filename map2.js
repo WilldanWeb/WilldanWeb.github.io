@@ -39,7 +39,7 @@
 
 	function loadMap() {
 		$( function() {
-			CSV.fetch({ url: 'offices.csv' }).done( initMap );
+			CSV.fetch({ url: 'https://WilldanWeb.github.io/offices.csv' }).done( initMap );
 		});
 	}
 
