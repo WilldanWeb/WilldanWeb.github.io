@@ -1,0 +1,173 @@
+.map-outer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#map {
+	height: 100%;
+}
+
+.map-main {
+	-webkit-flex: 1 1; /*Safari 6.1*/
+	-ms-flex: 1 1; /*ie10*/	
+	flex: 1 1;
+	height: 100%;
+}
+
+.map-sidebar {
+	-webkit-flex: 0 1 auto; /*Safari 6.1*/
+	-ms-flex: 0 1 auto; /*ie10*/	
+	flex: 0 1 auto;
+	width: 325px;
+	padding-right: 1em;
+	font-family: sans-serif;
+	font-size: 14px; /*17*/
+	cursor: pointer;
+	/*added to avoid clicking on Google map by accident*/
+	margin-top:20px;
+}
+
+.map-sidebar, .map-sidepanel {
+	height: 100%;
+}
+
+.map-sidebar-office {
+	cursor: default;
+	/*added*/
+	border: solid 2px #f5f5f5;
+	background-color: #f5f5f5;
+	padding: 10px;
+}
+
+.map-sidebar-scrolling {
+	overflow-y: auto;
+}
+
+.map-content {
+	-webkit-flex: 1; /*Safari 6.1*/
+	-ms-flex: 1; /*ie10*/	
+	flex: 1;
+	float: left; /*added for non-flex browsers, ignored by flex-enabled browsers*/
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	/*added*/
+	min-height: 300px;
+	max-height: 500px;
+}
+
+.map-columnbox {
+	float: left; /*added for non-flex browsers*/
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+
+.map-rowbox {
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	display: flex;
+	flex-direction: row;
+}
+
+.map-sidebar-state,
+.map-sidebar-list-office
+ {
+	padding: 1px 6px;
+}
+.map-sidebar-list-office img {
+	vertical-align: inherit !important;
+}
+
+.map-sidebar-state {
+	margin-bottom: 3px;
+}
+
+.map-sidebar-states {
+	font-size: 135%;
+/*add*/
+
+	margin-bottom: 10px;
+}
+.map-sidebar-states span {
+	padding: 2px 6px;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 2px solid #80caed;
+}
+.map-sidebar-states span:hover {
+	background-color: #80caed;
+}
+
+.map-sidebar-state {
+	font-size: 120%;
+}
+
+.map-sidebar-state-button {
+}
+
+.map-sidebar-state-list {
+}
+/*added*/
+.map-sidebar-office img {
+	width: 18px;
+	height: auto;
+	margin-right: 2px;
+}
+.map-info-office img {
+	margin-top: -5px;
+}
+.map-info-email,
+.map-info-directions {
+	margin-top: 8px;
+}
+
+@media screen and (orientation: landscape) {
+}
+
+@media screen and (orientation: portrait) {
+
+	.map-main {
+		flex-direction: column-reverse;
+	}
+
+	.map-sidebar {
+		-ms-flex: 1;
+		-webkit-flex: 1;
+		flex: 1;
+		width: inherit;
+	}
+}
+
+@media screen and (max-width: 800px) {
+
+	.map-sidebar {
+		width: 250px;
+	}
+}
+/*map too short if side-column short*/
+
+/*hack for for IE10+11-*/
+@media screen and (-ms-high-contrast: none) {
+	.map-outer {
+		min-height: 850px;
+	}
+	.map-sidebar-scrolling {
+		overflow-y:visible;
+		-ms-overflow-y:visible;
+	}
+	.map-sidebar-state	{
+		margin-bottom: 0px;
+	}
+}
+/*hack for Safari 9 ios*/
+@supports (overflow:-webkit-marquee) and (-webkit-text-size-adjust:none) and (justify-content:inherit) { 
+	.map-outer {
+		min-height: 850px;
+	}
+}
