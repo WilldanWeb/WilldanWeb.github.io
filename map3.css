@@ -56,8 +56,8 @@
 	position: relative;
 	overflow: hidden;
 	/*added*/
-	min-height: 50vh/*300px*/;
-	max-height: /*500px*/ 90vh;
+	min-height: 70vh/*300px*/;
+	max-height: /*500px*/ 98vh;
 }
 
 .map-columnbox {
