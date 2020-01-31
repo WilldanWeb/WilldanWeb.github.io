@@ -202,7 +202,7 @@
 		
 			email = str(
 				'<div class="map-info-email">',
-					'<img src="/images/mini-icons/EnvelopeFill.svg"/>',
+					'<img src="https://WilldanWeb.github.io/EnvelopeFill.svg"/>',
 					'<a href="http://willdan.com/email2.aspx?Name=', office.email, '&Page=', encodeURIComponent(office.office), '">',
 						'Email',
 					'</a>',
@@ -232,7 +232,7 @@
 			tollfree,
 			fax,
 			email,
-			'<div class="map-info-directions">','<img src="/images/mini-icons/LocationFill.svg"/>',
+			'<div class="map-info-directions">','<img src="https://WilldanWeb.github.io/LocationFill.svg"/>',
 				'<a href="', url, '" target="_blank">Directions</a>',
 			'</div>'
 		);
